@@ -76,12 +76,17 @@
 pipeline {
     agent any
     stages {
-        stage('Example Build') {
+        stage('Build') {
             steps {
                 echo 'Hello World'
             }
         }
-        stage('Example Deploy') {
+        stage('test') {
+            steps {
+                echo 'testing'
+            }
+        }
+        stage('Deploy') {
             when {
                 branch 'production'
             }
