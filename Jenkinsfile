@@ -3,22 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hi World'
+                echo 'Hi'
             }
         }
     }
-    stages {
         stage('Test') {
             steps {
-                echo 'Hello World'
+                echo 'Hello'
             }
         }
-    }
-    stages {
         stage('Deploy') {
             steps {
                 echo 'Good Morning'
             }
         }
-    }
 }
