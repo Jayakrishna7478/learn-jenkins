@@ -1,10 +1,22 @@
-// Declarative //
 pipeline {
-    agent any
+    agent none
     stages {
-        stage('Example') {
+        stage('Example Build') {
             steps {
-                echo 'Hello'
+                echo 'Hello World'
+            }
+        }
+        stage('Example Test') {
+            steps {
+                echo 'Hello Test'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                triggeredBy "TimerTrigger"
+            }
+            steps {
+                echo 'Deploying'
             }
         }
     }
