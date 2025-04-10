@@ -12,9 +12,9 @@ pipeline {
             }
         }
         stage('Example Deploy') {
-            when {
-                triggeredBy "TimerTrigger"
-            }
+            // when {
+            //     triggeredBy "TimerTrigger"
+            // }
             steps {
                 echo 'Deploying'
             }
