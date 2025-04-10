@@ -12,12 +12,20 @@ pipeline {
             }
         }
         stage('Example Deploy') {
-            // when {
-            //     triggeredBy "TimerTrigger"
-            // }
             steps {
                 echo 'Deploying'
             }
+        }
+    }
+     post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        success { 
+            echo 'I will say Hello when pipeline is success'
+        }
+        failure { 
+            echo 'This run when Pipeline is failed, used generally to send more alerts'
         }
     }
 }
